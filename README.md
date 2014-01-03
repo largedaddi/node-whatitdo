@@ -3,14 +3,17 @@ node-whatitdo
 
 Presentation from FredDev December 10, 2013.
 
-### Build
+### Dependencies
 
 Install [node.js](http://nodejs.org) then:
 
 ```
-npm install bower -g
+npm install bower grunt-cli -g
 ```
  
+### Build
+from the command line:
+
 ```
 npm install && bower install
 ```
