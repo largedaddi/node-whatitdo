@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/components/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="/static/components/reveal.js/css/theme/serif.css" id="theme">
+        <link rel="stylesheet" href="/static/style/style.css">
+    </head>
+    <body>
+        <div class="container">
+                <div class="reveal">
+                   <div class="slides">
+                       <section>
+                           <h1>Node.js</h1>
+                           <h3>What it do</h3>
+                       </section>
+                       <section>
+                           <h2>Agenda</h2>
+                           <ul>
+                               <li>Motivation</li>
+                               <li>How it works</li>
+                               <li>:) :(</li>
+                               <li>Philosophy</li>
+                               <li>Fundamentals</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <p>“...a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model...”</p>
+                       </section>
+                       <section>
+                           <h3>Ryan's (abbreviated) story</h3>
+                       </section>
+                       <section>
+                           <h3>Thesis: I/O is being done wrong.</h3>
+                       </section>
+                       <section>
+                            <h3>I/O:</h3>
+                           <p>“the communication between an information processing system (such as a computer) and the outside world, possibly a human or another information processing system.” - wikipedia</p>
+                       </section>
+                       <section>
+                           <img src="/static/assets/io-magnitude.png">
+                       </section>
+                       <section>
+                           <img src="/static/assets/waiting.png" alt="">
+                       </section>
+                       <section>
+                           <img src="/static/assets/scaling-threads.png" alt="">
+                       </section>
+                       <section>
+                           <img src="/static/assets/scaling-processes.png" alt="">
+                       </section>
+                       <section>
+                           <img src="/static/assets/scaling-event-loop.png" alt="">
+                       </section>
+                       <section>
+                           <img src="/static/assets/event-loop.png" alt="">
+                       </section>
+                       <section>
+                           <img src="/static/assets/node-makeup.png" alt="">
+                       </section>
+                       <section>
+                           <h2>Why Javascript?</h2>
+                           <ul>
+                               <li>Other languages were tried</li>
+                               <li>Not enough infrastructure</li>
+                               <li>Too much infrastructure</li>
+                               <li>Javascripters are used to evented model</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h1 class="face">:)</h1>
+                           <ul>
+                               <li>APIs/Single Page Apps</li>
+                               <li>"Shelling out"</li>
+                               <li>Streaming Data</li>
+                               <li>Realtime.. but not real realtime</li>
+                               <li>Lots of I/O</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h2>Demo</h2>
+                       </section>
+                       <section>
+                           <h1 class="face">:(</h1>
+                           <ul>
+                               <li>CPU-intensive tasks*</li>
+                               <li>CRUD**</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h2>Demo</h2>
+                       </section>
+                       <section>
+                           <h2>Philosophy</h2>
+                           <ul>
+                               <li>"Alternatives are cherished"</li>
+                               <li>Small core, active userland</li>
+                               <li>Modules should be small, single-purpose, and composable</li>
+                               <li>“Iterate quickly. Refactor ruthlessly. Rewrite bravely.”</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h2>Fundamentals</h2>
+                       </section>
+                       <section>
+                           <h2>Installation</h2>
+                           <p><a href="http://nodejs.org/">http://nodejs.org/</a> —> “Install”</p>
+                           <p>From source: <a href="https://github.com/joyent/node">https://github.com/joyent/node</a></p>
+                       </section>
+                       <section>
+                           <h2>Modules</h2>
+                           <ul>
+                               <li> require() </li>
+                               <li> module.exports </li>
+                               <li>Relative paths for "File Modules"</li>
+                               <li><em>node_modules</em> directory</li>
+                               <li>caching</li>
+                               <li>NPM</li>
+                           </ul>
+                       </section>                       
+                       <section>
+                           <h2>Demo</h2>
+                       </section>
+                       <section>
+                           <h2>Events</h2>
+                           <ul>
+                               <li>Observer pattern</li>
+                               <li>Inherit from EventEmitter</li>
+                               <li>Register listeners with <strong>.on()</strong></li>
+                               <li>Execute listeners by calling <strong>.emit()</strong></li>
+                           </ul>
+                       </section>
+                       <section>
+                            <h2>Demo</h2>
+                       </section>
+                       <section>
+                           <h2>Streams</h2>
+                           <ul>
+                               <li>Partially buffered abstraction for doing I/O</li>
+                               <li>Provide a consistent, reusable interface</li>
+                               <li>represents an object that can either be the source of data, the target of data, or both</li>
+                               <li>inherits from EventEmitter</li>
+                               <li>readable, writable, duplex, and transform</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h2>Code Sample</h2>
+                       </section>
+                       <section>
+                           <h2>Piping</h2>
+                           <p>Connect the streams.</p>
+                       </section>
+                       <section>
+                           <h2>Code Sample</h2>
+                       </section>
+                       <section>
+                           <h2>Buffers</h2>
+                           <ul>
+                               <li>For appropriately working with binary data</li>
+                               <li>Raw memory</li>
+                               <li>Cannot be resized</li>
+                               <li>Global</li>
+                           </ul>
+                       </section>
+                       <section>
+                           <h2>Code Sample</h2>
+                       </section>
+                       <section> 
+                        <p class="fragment fade-out">last thing..</p>
+                        <div class="fragment fade-in">
+                            <h1>JIFASNIF</h1>
+                            <h3>“Javascript is Fun so Node is Fun”</h3>
+                        </div>
+                       </section>
+                   </div> 
+                </div>
+                <img src="/static/assets/autumn-trees.png" style="position:absolute; left:85px; top:78px;" class="tree">
+                <img src="/static/assets/green-trees.png" style="position:absolute; right:78px; top:389px;" class="tree">
+                <img src="/static/assets/blue-trees.png" style="position:absolute; left:279px; bottom:50px;" class="tree">
+        </div>
+        <script src="/static/components/jquery/jquery.min.js"></script>
+        <script src="/static/components/reveal.js/js/reveal.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- // <script src="/static/lib/character.js"></script> -->
+        <script src="/static/js/character.js"></script>
+        <!-- // <script src="/static/lib/world.js"></script> -->
+        <script src="/static/js/world.js"></script>
+        <script src="/static/js/master.js"></script>
+    </body>
+</html>

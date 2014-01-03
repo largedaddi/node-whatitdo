@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: 'ChronoTrigger';
+    src: url('/static/assets/chronotrigger.eot');
+    src: url('/static/assets/chronotrigger.eot') format('embedded-opentype'),
+         url('/static/assets/chronotrigger.woff') format('woff'),
+         url('/static/assets/chronotrigger.ttf') format('truetype'),
+         url('/static/assets/chronotrigger.svg#ChronoTriggerRegular') format('svg');
+}
+
+html, body {
+    /*overflow: auto;*/
+    background-color: #fff;
+    background-image: url("/static/assets/background-snow.png");
+    background-repeat: repeat;
+}
+
+.face {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.container {
+    height: 100%;
+    margin: 10px auto 0 auto;
+    position: relative;
+}
+
+.character {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    z-index: 0;
+    background-position: 0px 0px;
+}
+
+.still {
+    background-position: 0px 0px;
+}
+
+.front {
+    -webkit-animation: moveFront .3s steps(2) infinite;
+       -moz-animation: moveFront .3s steps(2) infinite;
+        -ms-animation: moveFront .3s steps(2) infinite;
+         -o-animation: moveFront .3s steps(2) infinite;
+            animation: moveFront .3s steps(2) infinite;
+}
+
+.right {
+    -webkit-animation: moveRight .3s steps(2) infinite;
+       -moz-animation: moveRight .3s steps(2) infinite;
+        -ms-animation: moveRight .3s steps(2) infinite;
+         -o-animation: moveRight .3s steps(2) infinite;
+            animation: moveRight .3s steps(2) infinite;
+}
+
+.back {
+    -webkit-animation: moveBack .3s steps(2) infinite;
+       -moz-animation: moveBack .3s steps(2) infinite;
+        -ms-animation: moveBack .3s steps(2) infinite;
+         -o-animation: moveBack .3s steps(2) infinite;
+            animation: moveBack .3s steps(2) infinite;
+}
+
+.left {
+    -webkit-animation: moveLeft .3s steps(2) infinite;
+       -moz-animation: moveLeft .3s steps(2) infinite;
+        -ms-animation: moveLeft .3s steps(2) infinite;
+         -o-animation: moveLeft .3s steps(2) infinite;
+            animation: moveLeft .3s steps(2) infinite;
+}
+
+
+/*@keyframes moveFront {*/
+/*@-moz-keyframes */
+@-webkit-keyframes moveFront {
+    from { background-position: 0px 0; }
+    to { background-position: -64px 0px; }
+}
+
+/*@keyframes moveRight {*/
+@-webkit-keyframes moveRight {
+    from {background-position: 0px -32px; }
+    to {background-position: -64px -32px; }
+}
+
+/*@keyframes moveBack {*/
+@-webkit-keyframes moveBack {
+    from {background-position: 0px -64px; }
+    to {background-position: -64px -64px; }
+}
+
+/*@keyframes moveLeft {*/
+@-webkit-keyframes moveLeft {
+    from {background-position: 0px -96px; }
+    to {background-position: -64px -96px; }
+}
+
+.speechCloud {
+    width: 104px;
+    height: 34px;
+    padding: 2px 3px;
+    background-color: #fff;
+    font-family: "ChronoTrigger", "Geneva", sans-serif;
+    position: absolute;
+    top: -42px;
+    left: -64px;
+    float: left;
+    font-size: 12px;
+    color: #000;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.tree {
+    z-index: 1;
+}
+
+/**
+ *
+ * Reveal Overrides
+ *
+ */
+
+.reveal {
+  font-family: "ChronoTrigger", "Geneva", sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: #000000;
+  font-family: "ChronoTrigger", "Geneva", sans-serif;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "node-whatitdo",
+  "version": "0.0.1",
+  "description": "Intro to Node Presentation",
+  "main": "app.js",
+  "scripts": {
+    "test": "node tests",
+    "start": "node app.js"
+  },
+  "author": "Pilks",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.4",
+    "socket.io": "~0.9.16",
+    "ejs": "~0.8.5"
+  },
+  "devDependencies": {
+    "bower": "~1.2.8",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-ejs": "~0.1.0"
+  }
+}
