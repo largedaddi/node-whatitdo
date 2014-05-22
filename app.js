@@ -12,6 +12,10 @@ var password = "slordrulez!";
 app.use('/static', express.static(__dirname + '/static'));
 
 var authenticationMiddleware = express.basicAuth(username, password);
+
+// 
+// Routes
+
 app.get('/master', authenticationMiddleware, function (req, res) {
 	res.sendfile(__dirname + '/site/master.html');
 });
@@ -19,6 +23,9 @@ app.get('/master', authenticationMiddleware, function (req, res) {
 app.get('/thrall', function (req, res) {
 	res.sendfile(__dirname + '/site/thrall.html');
 });
+
+// 
+// Web Socket nonsense
 
 var characters = [];
 var masterSocket;
@@ -84,3 +91,4 @@ ioServer.sockets.on('connection', function onConnection (socket) {
 // kick it off
 
 server.listen(9001);
+console.log('listening on 9001');

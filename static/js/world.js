@@ -43,7 +43,13 @@ World.prototype._setupReveal = function (isMaster) {
 	  progress: false,
 	  slideNumber: false,
 	  history: false,
-	  keyboard: true,
+	  keyboard: {
+	    32: null, // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+	    70: null,
+	    66: null,
+	    190: null,
+	    191: null
+	  },
 	  overview: false,
 	  center: true,
 	  touch: true,
